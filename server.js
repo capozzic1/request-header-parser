@@ -11,9 +11,10 @@ res.sendFile(__dirname + "/index.html");
 
 let ostype = os.type();
 let osarch = os.arch();
+let osplatform = os.platform();
 let lang = accepts(req).languages();
-let userInfo = { userIP: req.connection.remoteAddress,
-                 userOS: {ostype,osarch},
+let userInfo = { userIP: req.ip,
+                 userOS: {osplatform,ostype,osarch},
                  userLang: lang
                 }
 
