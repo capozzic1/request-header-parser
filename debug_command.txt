@@ -1,0 +1,3 @@
+set DEBUG=log node server.js
+
+heroku logs -t i
